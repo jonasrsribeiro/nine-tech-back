@@ -17,7 +17,7 @@ jobs:
 
       - name: Atualizar tarefa no GitHub Task Board
         id: update_task
-        uses: jonasrsribeiro/github-task-board-action@v1
+        uses: Nine-Tech/nine-tech-back
         with:
           task-id: 1
           column-id-awaiting-review: 47fc9ee4
