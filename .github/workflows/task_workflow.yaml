@@ -1,0 +1,26 @@
+name: Atualizar GitHub Task Board
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - closed
+
+jobs:
+  update_task_board:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v2
+
+      - name: Atualizar tarefa no GitHub Task Board
+        id: update_task
+        uses: jonasrsribeiro/github-task-board-action@v1
+        with:
+          task-id: 1
+          column-id-awaiting-review: 47fc9ee4
+          column-id-dod: 98236657
+
+  # Adicione mais passos aqui para marcar a hora que a tarefa foi concluída.
